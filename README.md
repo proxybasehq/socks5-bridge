@@ -1,6 +1,6 @@
 # socks5-bridge
 
-A local HTTP-to-SOCKS5 proxy bridge for Chrome on macOS.
+A local HTTP-to-SOCKS5 proxy bridge for Chrome.
 
 **Problem:** Chrome doesn't support SOCKS5 username/password authentication, so you can't point it at `socks5://user:pass@host:port` and expect it to work.
 
