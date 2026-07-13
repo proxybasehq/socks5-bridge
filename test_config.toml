@@ -1,0 +1,35 @@
+[listener]
+host = "127.0.0.1"
+port = 8900
+
+[upstream]
+type = "socks5"
+host = "brd.superproxy.io"
+port = 22228
+username = "brd-customer-hl_e2c9f42e-zone-residential_proxy1"
+password = "09l0q13xua9k"
+connect_timeout_ms = 8000
+auth_timeout_ms = 5000
+command_timeout_ms = 8000
+remote_dns = true
+
+[policy]
+allow_loopback_only = true
+allow_private_destinations = false
+allow_localhost_destinations = false
+max_concurrent_connections = 256
+idle_timeout_ms = 60000
+graceful_shutdown_timeout_ms = 5000
+
+[logging]
+level = "info"
+format = "json"
+redact_credentials = true
+
+[health]
+enable_admin_api = false
+admin_host = "127.0.0.1"
+admin_port = 8901
+probe_host = "example.com"
+probe_port = 443
+probe_interval_ms = 30000
